@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokemon">
+<head>
+  <meta charset="UTF-8">
+<!--styles  -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!--bower  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!--module  -->
+  <script src="app.js"></script>
+  <!-- controllers -->
+  <script src="controllers/main.controller.js"></script>
+  <!-- directives -->
+  <script src="directives/pokemon.js"></script>
+  <!-- services -->
+  <script src="services/poke.service.js"></script>
+
+  <title>PoKemOn</title>
+</head>
+<body>
+  <main class="container md-cl-10 md-col-offset-1">
+    <div class="page-header">
+      <h1>Pokemon<small> why am I doing this?!</small></h1>
+    </div>
+    <section ng-controller="MainCtrl">
+      <pk-item data="pokemon"></pk-item>
+    </section>
+  </main>
+
+</body>
+</html>

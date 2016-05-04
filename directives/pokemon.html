@@ -1,0 +1,22 @@
+<section>
+  <article ng-repeat="pokemon in data" class="jumbotron">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 ng-bind="pokemon.name"></h2>
+      <img src="{{pokemon.sprite}}" alt="">
+
+      <h3>Type</h3>
+      <ul ng-repeat="type in pokemon.types">
+        <li ng-bind="type.type.name"></li>
+      </ul>
+
+    </div>
+    <div class="col-md-4">
+      <h3>Moves</h3>
+        <ul ng-repeat="move in pokemon.moves|limitTo:6">
+          <li ng-bind="move.move.name"></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
